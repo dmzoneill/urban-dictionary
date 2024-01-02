@@ -34,7 +34,7 @@ Badges from: [NodeICO](https://nodei.co), [standard JS](https://standardjs.com) 
 
 * Module rewritten with more up-to-date ES6 features.
 * Module size has been reduced slightly.
-* New methods have been added with the help from [this](https://github.com/NightfallAlicorn/urban-dictionary/issues/8) posted issue.
+* New methods have been added with the help from [this](https://github.com/dmzoneill/urban-dictionary/issues/8) posted issue.
   * [autocompleteExtra](#autocompleteExtra) 
   * [autocomplete](#autocomplete)
   * [words_of_the_day](#words_of_the_day)
