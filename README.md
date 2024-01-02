@@ -26,6 +26,9 @@ Badges from: [NodeICO](https://nodei.co), [standard JS](https://standardjs.com) 
 
 ## What's New
 
+**v3.0.3**
+Copy and upload to npm after original author deleted it
+
 **v3.0.0**
 
 * Module rewritten with more up-to-date ES6 features.
