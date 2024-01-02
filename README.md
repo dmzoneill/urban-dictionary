@@ -410,3 +410,4 @@ ud.wordsOfTheDay().then((results) => {
 | thumbs_up    | Number | The number of accepted votes for the definition.                                                |
 | word         | String | The term used to find this definition.                                                              |
 | written_on   | String | The date the definition was posted. Format: "[YYYY]-[MM]-[DD]T[HH]:[MM]:[SS].[MMM][Z]"          |
+
