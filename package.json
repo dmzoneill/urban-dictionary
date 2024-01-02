@@ -1,5 +1,5 @@
 {
-  "name": "urban-dictionary",
+  "name": "@dmzoneill/urban-dictionary",
   "version": "3.0.3",
   "description": "Simple Node.js module that provides easy methods of obtaining urbandictionary.com definitions.",
   "main": "urban-dictionary.js",
@@ -19,7 +19,7 @@
     "nightfallalicorn",
     "dmzoneill"
   ],
-  "author": "NightfallAlicorn",
+  "author": "dmzoneill",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dmzoneill/urban-dictionary/issues"
