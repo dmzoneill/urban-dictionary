@@ -2,8 +2,8 @@
 
 [![contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![github-issue](https://img.shields.io/github/issues/dmzoneill/urban-dictionary)](https://github.com/dmzoneill/urban-dictionary/issues)
-[![npm-license](https://img.shields.io/npm/l/urban-dictionary)](LICENSE)
-[![npm-version](https://img.shields.io/npm/v/urban-dictionary)]([https://www.npmjs.com/package/urban-dictionary](https://www.npmjs.com/package/@dmzoneill/urban-dictionary))
+[![npm-license](https://img.shields.io/npm/l/@dmzoneill/urban-dictionary)](LICENSE)
+[![npm-version](https://img.shields.io/npm/v/@dmzoneill/urban-dictionary)]([https://www.npmjs.com/package/urban-dictionary](https://www.npmjs.com/package/@dmzoneill/urban-dictionary))
 [![npm-downloads](https://img.shields.io/npm/dm/urban-dictionary)](https://www.npmjs.com/package/urban-dictionary)
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
