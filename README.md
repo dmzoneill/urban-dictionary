@@ -26,7 +26,7 @@ Badges from: [NodeICO](https://nodei.co), [standard JS](https://standardjs.com) 
 
 ## What's New
 
-**v3.0.4**
+**v3.0.5**
 * Copy and upload to npm after original author deleted it.
 * original development by NightfallAlicorn
 
