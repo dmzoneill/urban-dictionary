@@ -30,7 +30,7 @@ Badges from: [NodeICO](https://nodei.co), [standard JS](https://standardjs.com) 
 
 ## What's New
 
-**v3.0.13**
+**v3.0.14**
 
 - Copy and upload to npm after original author deleted it.
 - original development by NightfallAlicorn
