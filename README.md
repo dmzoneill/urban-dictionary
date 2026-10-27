@@ -42,7 +42,7 @@ Badges from: [NodeICO](https://nodei.co), [standard JS](https://standardjs.com) 
 - New methods have been added with the help from [this](https://github.com/dmzoneill/urban-dictionary/issues/8) posted issue.
   - [autocompleteExtra](#autocompleteextra)
   - [autocomplete](#autocomplete)
-  - [words_of_the_day](#words_of_the_day)
+  - [words_of_the_day](#wordsoftheday)
 - At some point. Urban had stopped providing `sounds` and `tags` with certain methods. These have been removed from the module.
 - The following methods have been renamed for clarity.
   - `defid` to [getDefinitionByDefid](#getdefinitionbydefid)
@@ -212,9 +212,7 @@ ud.define("test", (error, results) => {
 
   console.log("define (callback)");
 
-  Object.entries(results[0]).forEach(([key, prop]) => {
-    console.log(`${key}: ${prop}`);
-  });
+  console.table(results[0]);
 });
 
 // Promise
@@ -222,9 +220,7 @@ ud.define("test")
   .then((results) => {
     console.log("define (promise)");
 
-    Object.entries(results[0]).forEach(([key, prop]) => {
-      console.log(`${key}: ${prop}`);
-    });
+    console.table(results[0]);
   })
   .catch((error) => {
     console.error(`define (promise) - error ${error.message}`);
@@ -264,9 +260,7 @@ ud.getDefinitionByDefid(217456, (error, result) => {
 
   console.log("getDefinitionByDefid (callback)");
 
-  Object.entries(result).forEach(([key, prop]) => {
-    console.log(`${key}: ${prop}`);
-  });
+  console.table(result);
 });
 
 // Promise
@@ -274,9 +268,7 @@ ud.getDefinitionByDefid(217456)
   .then((result) => {
     console.log("getDefinitionByDefid (promise)");
 
-    Object.entries(result).forEach(([key, prop]) => {
-      console.log(`${key}: ${prop}`);
-    });
+    console.table(result);
   })
   .catch((error) => {
     console.error(`getDefinitionByDefid (promise) - error ${error.message}`);
@@ -287,17 +279,7 @@ ud.getDefinitionByDefid(217456)
 
 Use this to retrieve an array up to 10 random [DefinitionObject](#definitionobject).
 
-_Arguments_
-
-- `callback` **Function**
-  - `error` **Error** If there's an error else **null**.
-  - `results` **Array of [DefinitionObject](#definitionobject)**
-
-_Return_
-
-- `return` **Promise** if no **Function** is provided for `callback`.
-  - `then` **Array of [DefinitionObject](#definitionobject)**
-  - `catch` **Error**
+Takes an optional `callback` with the same `(error, results)` signature as [define](#define), and returns a **Promise** when no callback is given.
 
 E.g.
 
@@ -306,28 +288,12 @@ E.g.
 
 const ud = require("urban-dictionary");
 
-// Callback
-ud.random((error, results) => {
-  if (error) {
-    console.error(`random (callback) error - ${error.message}`);
-    return;
-  }
-
-  console.log("random (callback)");
-
-  Object.entries(results[0]).forEach(([key, prop]) => {
-    console.log(`${key}: ${prop}`);
-  });
-});
-
 // Promise
 ud.random()
   .then((results) => {
     console.log("random (promise)");
 
-    Object.entries(results[0]).forEach(([key, prop]) => {
-      console.log(`${key}: ${prop}`);
-    });
+    console.table(results[0]);
   })
   .catch((error) => {
     console.error(`random (promise) - error ${error.message}`);
@@ -338,17 +304,7 @@ ud.random()
 
 Use this to retrieve an array with 10 Words of the Day [DefinitionObject](#definitionobject).
 
-_Arguments_
-
-- `callback` **Function**
-  - `error` **Error** If there's an error else **null**.
-  - `results` **Array of [DefinitionObject](#definitionobject)**
-
-_Return_
-
-- `return` **Promise** if no **Function** is provided for `callback`.
-  - `then` **Array of [DefinitionObject](#definitionobject)**
-  - `catch` **Error**
+Takes an optional `callback` with the same `(error, results)` signature as [define](#define), and returns a **Promise** when no callback is given.
 
 E.g.
 
@@ -357,28 +313,12 @@ E.g.
 
 const ud = require("urban-dictionary");
 
-// Callback
-ud.wordsOfTheDay((error, results) => {
-  if (error) {
-    console.error(`wordsOfTheDay (callback) error - ${error.message}`);
-    return;
-  }
-
-  console.log("wordsOfTheDay (callback)");
-
-  Object.entries(results[0]).forEach(([key, prop]) => {
-    console.log(`${key}: ${prop}`);
-  });
-});
-
 // Promise
 ud.wordsOfTheDay()
   .then((results) => {
     console.log("wordsOfTheDay (promise)");
 
-    Object.entries(results[0]).forEach(([key, prop]) => {
-      console.log(`${key}: ${prop}`);
-    });
+    console.table(results[0]);
   })
   .catch((error) => {
     console.error(`wordsOfTheDay (promise) - error ${error.message}`);
@@ -426,4 +366,4 @@ ud.wordsOfTheDay()
 | thumbs_down  | Number | The number of declined votes for the definition.                                                |
 | thumbs_up    | Number | The number of accepted votes for the definition.                                                |
 | word         | String | The term used to find this definition.                                                          |
-| written_on   | String | The date the definition was posted. Format: "[YYYY]-[MM]-[DD]T[HH]:[MM]:[SS].[MMM][Z]"          |
+| written_on   | String | The date the definition was posted. Format: `YYYY-MM-DDTHH:MM:SS.MMMZ`                          |
